@@ -1,0 +1,18 @@
+<div class="table-wrapper">
+    <div class="table-container">
+        <table class="table">
+            <tr>
+                <th *ngFor="let column of columns">
+                    <span>{{ column.header }}</span>
+                </th>
+            </tr>
+
+            <tr *ngFor="let row of rows">
+                <ng-container
+                    [ngTemplateOutlet]="tableContentDirective"
+                    [ngTemplateOutletContext]="{ row: row, columns: columns }">
+                </ng-container>
+            </tr>
+        </table>
+    </div>
+</div>

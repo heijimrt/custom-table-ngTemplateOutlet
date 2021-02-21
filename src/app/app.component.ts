@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'context-component';
+
+  public data = [
+    {
+      column1: 'title'
+    }
+  ];
 }
